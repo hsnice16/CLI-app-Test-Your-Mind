@@ -3,12 +3,14 @@ console.clear();
 const readlineSync = require('readline-sync');
 const chalk = require('chalk');
 
+var username = readlineSync.question('Before we start with quiz, Please enter your name: ');
+
 console.log(chalk.bold.red.bgWhite('\t\t  -------- Test Your Mind !! --------  '));
 console.log(chalk.magentaBright(`\n\tThe quiz has two levels :
 \n\tLevel Zero : contains 6 questions, \n\t\t\t\tto pass it you have to give 5 correct answers
 \n\tLevel One : contains 4 questions, \n\t\t\t\tto pass it you have to give 3 correct answers`));
 
-console.log(chalk.bold.red.bgWhite(`\n\n\t\t  -------- ${chalk.underline('Level Zero Started, Best Of Luck !!')} --------  \n`));
+console.log(chalk.bold.red.bgWhite(`\n\n\t\t  -------- ${chalk.underline(`Level Zero Started, Best Of Luck ${username} !!`)} --------  \n`));
 
 var levelZeroScore = 0;
 
@@ -72,7 +74,7 @@ else {
 
 function startLevelTwo() {
 
-  console.log(chalk.bold.red.bgWhite(`\n\n\t\t  -------- ${chalk.underline('Level One Started, Best Of Luck !!')} --------  \n`));
+  console.log(chalk.bold.red.bgWhite(`\n\n\t\t  -------- ${chalk.underline(`Level One Started, Best Of Luck ${username} !!`)} --------  \n`));
 
   var levelOneScore = 0;
 
